@@ -10,11 +10,7 @@ function range(start, end) {
         return rangeArray.map((number) => number + start);
     }
 
-    if (end === undefined) {
-        return generateRange;
-    } else {
-        return generateRange(end);
-    }
+    return end === undefined ? generateRange : generateRange(end);
 }
 
 console.log('[3]', range(3, 3));
